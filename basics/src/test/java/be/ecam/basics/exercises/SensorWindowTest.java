@@ -13,7 +13,7 @@ class SensorWindowTest {
 
     @Test
     void averageVeryLargeShouldNotOverflow() {
-        int avg = SensorWindow.average(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE});
+        long avg = SensorWindow.average(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE});
         assertEquals(Integer.MAX_VALUE, avg);
     }
 }

@@ -1,5 +1,7 @@
 package be.ecam.basics.exercises;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class Catalog {
@@ -16,7 +18,8 @@ public class Catalog {
         public List<String> getTags() { return tags; }
     }
 
-    public static int countTags(Product p) {
-        return p.getTags().size();
+    public static int countTags(@NotNull Product p) {
+        List<String> tags = p.getTags();
+        return (tags == null) ? 0 : tags.size();
     }
 }

@@ -11,9 +11,9 @@ class AccountTest {
         Account a = new Account();
         a.deposit(0.10);
         a.deposit(0.20);
-        assertEquals(0.30, a.getBalance(), 0.0, "Money operations should be exact in cents");
+        assertEquals(0.30, a.getBalance(), 0, "Money operations should be exact in cents");
         a.withdraw(0.10);
-        assertEquals(0.20, a.getBalance(), 0.0);
+        assertEquals(0.20, a.getBalance(), 0);
     }
 
     @Test
